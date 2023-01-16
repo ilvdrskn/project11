@@ -1,0 +1,91 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("./fonts/Poppins-Regular.ttf");
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+body {
+    font-family: Poppins;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 1em;
+    gap: 1em;
+}
+
+h2 {
+    color: var(--VeryDarkBlue);
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+h2:first-child {
+    font-weight: 400;
+}
+
+.info {
+    color: var(--grayishBlue);
+}
+
+h3 {
+    color: var(--VeryDarkBlue);
+}
+
+.item {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgb(45, 42, 42);
+    border-radius: 10px;
+}
+
+svg{
+    align-self: flex-end;
+}
+
+.item_1{border-top: 5px solid var(--red);}
+
+.item_2{border-top: 5px solid var(--cyan);}
+
+.item_3{border-top: 5px solid var(--Orange);}
+
+.item_4{border-top: 5px solid var(--Blue);}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    section {
+        display: grid;
+        grid-template-columns: minmax(350px, 450px);
+    }
+
+    section.items {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+}
+
